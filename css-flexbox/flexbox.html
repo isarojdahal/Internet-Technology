@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+
+    <style>
+      .mydiv {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flex-wrap: nowrap / wrap -->
+    <!-- justify-content: start, center, end, space-between -->
+    <!-- flex directoin: row, column, row-reverse, column-reverse -->
+    <div
+      style="
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: start;
+      "
+    >
+      <div class="mydiv">BBA</div>
+      <div class="mydiv">BHM</div>
+      <div class="mydiv">BCSIT</div>
+    </div>
+  </body>
+</html>
