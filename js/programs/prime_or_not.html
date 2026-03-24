@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let num = 14;
+    let isPrime = true;
+
+    if(num<=1) isPrime=false
+    else{
+        for(let i=2; i<num;i++){
+            if(num%i==0){
+              isPrime=false;
+              break;
+            }
+        }
+       
+}
+    document.write(isPrime?" Prime ":"Not Prime")
+</script>
+</html>
