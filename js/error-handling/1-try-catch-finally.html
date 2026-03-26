@@ -1,0 +1,13 @@
+<button onclick="test()">Run Try-Catch</button>
+<script>
+function test() {
+    try {
+        console.log("Trying...");
+        badFunction(); // Throws ReferenceError
+    } catch (e) {
+        console.error("Caught error:", e.message);
+    } finally {
+        console.log("Finally always runs.");
+    }
+}
+</script>

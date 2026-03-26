@@ -1,0 +1,18 @@
+<button onclick="test(15)">Test Age 15</button>
+<button onclick="test(20)">Test Age 20</button>
+<script>
+class ValidationError extends Error {}
+
+function test(age) {
+    try {
+        if (age < 18) throw new ValidationError("Must be 18+");
+        console.log("Access granted for age", age);
+    } catch (e) {
+        if (e instanceof ValidationError) {
+            console.warn("Validation Error:", e.message);
+        } else {
+            console.error("System Error:", e.message);
+        }
+    }
+}
+</script>

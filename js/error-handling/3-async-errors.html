@@ -1,0 +1,16 @@
+<button onclick="fetchData(false)">Success Request</button>
+<button onclick="fetchData(true)">Failed Request</button>
+<script>
+const api = (fail) => new Promise((resolve, reject) => 
+    setTimeout(() => fail ? reject(new Error("Network Error")) : resolve("OK!"), 500)
+);
+
+async function fetchData(fail) {
+    try {
+        const data = await api(fail);
+        console.log("Response:", data);
+    } catch (e) {
+        console.error("Caught Async Error:", e.message);
+    }
+}
+</script>
